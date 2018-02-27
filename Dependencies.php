@@ -27,6 +27,39 @@ final class Dependencies
             $headers[] = self::FILE_HEADER_ID;
             return $headers;
         });
+        
+        // Listen for plugins load to enforce plugin dependencies
+        add_action( 'plugins_loaded', function() {
+            self::buildDependencies();
+        });
+    }
+    
+    
+    /**
+     * Build dependencies for all plugins
+     */
+    private static function buildDependencies()
+    {
+        // For each plugin, extract its dependencies from its file header
+        $plugins = \WordPress\Plugins::Get();
+        foreach ( $plugins as $plugin ) {
+            
+            // Lookup the dependency IDs
+            $dependencyIDs = $plugin->get( self::FILE_HEADER_ID );
+            $dependencyIDs = trim( $dependencyIDs );
+            if ( '' === $dependencyIDs ) {
+                continue;
+            }
+            $dependencyIDs = explode( ',', $dependencyIDs );
+            
+            // For each dependency, create a new dependency instance
+            foreach ( $dependencyIDs as $dependencyID ) {
+                $dependencyID = trim( $dependencyID );
+                if ( '' !== $dependencyID ) {
+                    new Dependencies\Dependency( $plugin->getID(), $dependencyID );
+                }
+            }
+        }
     }
 }
 Dependencies::Initialize();
