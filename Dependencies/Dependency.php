@@ -49,7 +49,7 @@ final class Dependency
         if ( null === $this->dependency ) {
             $this->plugin->deactivate( Sites::ALL );
             $this->plugin->deactivate( Sites::CURRENT );
-            self::notify( "Could not activate the <b>{$this->plugin->getName()}</b> plugin because the required plugin <b>{$dependencyID}</b> does not exist." );
+            self::notify( "Deactivating the plugin <b>{$this->plugin->getName()}</b> because the required plugin <b>{$dependencyID}</b> does not exist." );
         }
         
         // Site-wide: try to activate the dependency if the plugin is active
@@ -83,6 +83,7 @@ final class Dependency
         $isActive = $this->dependency->activate( $siteID );
         if ( !$isActive ) {
             $this->plugin->deactivate( $siteID );
+            self::notify( "Deactivating the plugin <b>{$this->plugin->getName()}</b> because the required plugin <b>{$this->dependency->getName()}</b> could not be activated." );
         }
         return $isActive;
     }
