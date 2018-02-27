@@ -20,6 +20,11 @@
         "php": ">=5.4",
         "evanwashkow/object-oriented-wordpress": ">=0.2.1"
     },
+    "autoload": {
+        "files": [
+            "Dependencies.php"
+        ]
+    },
     "authors": [
         {
             "name":  "Evan Washkow",
