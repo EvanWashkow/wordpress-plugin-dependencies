@@ -1,5 +1,5 @@
 # WordPress Plugin Dependencies
-Allows you to add plugin dependencies the right way to WordPress
+WordPress plugin dependencies done simply, the right way
 
 ## Setup
 
