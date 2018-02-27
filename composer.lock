@@ -1,0 +1,150 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "77b01f7752daccfef20b04c9e332eba6",
+    "packages": [
+        {
+            "name": "evanwashkow/object-oriented-wordpress",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EvanWashkow/object-oriented-wordpress.git",
+                "reference": "a2bf118711b188069a3e230f4e27a0afe0a7c4de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EvanWashkow/object-oriented-wordpress/zipball/a2bf118711b188069a3e230f4e27a0afe0a7c4de",
+                "reference": "a2bf118711b188069a3e230f4e27a0afe0a7c4de",
+                "shasum": ""
+            },
+            "require": {
+                "evanwashkow/php-libraries": ">=0.1.2",
+                "evanwashkow/php-utilities": ">=0.2.0",
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "WordPress.php"
+                ],
+                "psr-4": {
+                    "WordPress\\": [
+                        "WordPress"
+                    ],
+                    "WordPress\\Shared\\": [
+                        "WordPress/Shared/interfaces"
+                    ]
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Evan Washkow",
+                    "email": "epwashkow@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Access all of WordPress in an object-oriented way",
+            "support": {
+                "source": "https://github.com/EvanWashkow/object-oriented-wordpress/tree/0.2.1",
+                "issues": "https://github.com/EvanWashkow/object-oriented-wordpress/issues"
+            },
+            "time": "2018-02-27T18:48:50+00:00"
+        },
+        {
+            "name": "evanwashkow/php-libraries",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EvanWashkow/php-libraries.git",
+                "reference": "116d65a0983d7efacc4bcb368bd735c8f0a35b46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EvanWashkow/php-libraries/zipball/116d65a0983d7efacc4bcb368bd735c8f0a35b46",
+                "reference": "116d65a0983d7efacc4bcb368bd735c8f0a35b46",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHP\\": "PHP/"
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Evan Washkow",
+                    "email": "epwashkow@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Foundational shared libraries for PHP",
+            "support": {
+                "source": "https://github.com/EvanWashkow/php-libraries/tree/0.1.2",
+                "issues": "https://github.com/EvanWashkow/php-libraries/issues"
+            },
+            "time": "2018-02-21T20:22:09+00:00"
+        },
+        {
+            "name": "evanwashkow/php-utilities",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EvanWashkow/php-utilities.git",
+                "reference": "bc3c7c3c0ccb053d35a190394b6bc720a238bb61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EvanWashkow/php-utilities/zipball/bc3c7c3c0ccb053d35a190394b6bc720a238bb61",
+                "reference": "bc3c7c3c0ccb053d35a190394b6bc720a238bb61",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHP\\": "PHP/"
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Evan Washkow",
+                    "email": "epwashkow@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Foundational shared utilities for PHP",
+            "support": {
+                "source": "https://github.com/EvanWashkow/php-utilities/tree/master",
+                "issues": "https://github.com/EvanWashkow/php-utilities/issues"
+            },
+            "time": "2018-02-17T00:01:35+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.4"
+    },
+    "platform-dev": []
+}

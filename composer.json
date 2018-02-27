@@ -1,0 +1,31 @@
+{
+    "name":        "evanwashkow/wordpress-plugin-dependencies",
+    "description": "Allows plugin dependencies to be added the right way to WordPress",
+    "version":     "0.0.0",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/EvanWashkow/php-libraries"
+        },
+        {
+            "type": "vcs",
+            "url":  "https://github.com/EvanWashkow/php-utilities"
+        },
+        {
+            "type": "vcs",
+            "url":  "https://github.com/EvanWashkow/object-oriented-wordpress"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "evanwashkow/object-oriented-wordpress": ">=0.2.1"
+    },
+    "authors": [
+        {
+            "name":  "Evan Washkow",
+            "email": "epwashkow@gmail.com",
+            "role":  "Developer"
+        }
+    ],
+    "license": "GPL-3.0-or-later"
+}
