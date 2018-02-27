@@ -40,19 +40,42 @@ final class Dependency
         
         // Deactivate plugin if the dependency does not exist
         if ( null === $this->dependency ) {
-            $this->deactivatePlugin();
+            $this->plugin->deactivate( Sites::ALL );
+            $this->plugin->deactivate( Sites::CURRENT );
+        }
+        
+        // Site-wide: try to activate the dependency if the plugin is active
+        // (necessary for plugin updates)
+        elseif (
+            $this->plugin->isActive(      Sites::ALL ) &&
+            !$this->dependency->isActive( Sites::ALL )
+        ) {
+            $this->activateDependency( Sites::ALL );
+        }
+        
+        // Single-site: try to activate the dependency if the plugin is active
+        // (necessary for plugin updates)
+        elseif (
+            $this->plugin->isActive(      Sites::CURRENT ) &&
+            !$this->dependency->isActive( Sites::CURRENT )
+        ) {
+            $this->activateDependency( Sites::CURRENT );
         }
     }
     
     
     /**
-     * Deactivate the plugin
-     *
-     * @return bool
-     */
-    private function deactivatePlugin()
+    * Activate this dependency. On failure, deactivate the plugin.
+    *
+    * @param int $siteID The site ID or \WordPress\Sites constant
+    * @return bool
+    */
+    private function activateDependency( int $siteID )
     {
-        $this->plugin->deactivate( Sites::ALL );
-        return $this->plugin->deactivate( Sites::CURRENT );
+        $isActive = $this->dependency->activate( $siteID );
+        if ( !$isActive ) {
+            $this->plugin->deactivate( $siteID );
+        }
+        return $isActive;
     }
 }
