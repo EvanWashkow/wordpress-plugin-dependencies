@@ -3,7 +3,7 @@ Allows you to add plugin dependencies the right way to WordPress
 
 ## Setup
 
-After adding this WordPress extension via composer, add `Dependencies` to your plugin header, and continue on with your life.
+After adding this WordPress extension via composer, add `Dependencies` (of the plugin folder names) to your plugin header, and continue on with your life.
 
 ```
 /**
