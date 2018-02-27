@@ -108,15 +108,29 @@ final class Dependency
             return;
         }
         
-        // Print queue of notifications
-        add_action( 'admin_notices', function() {
-            $html = '';
-            foreach ( self::$notifications as $notification ) {
-                $html .= "<div class='notice notice-{$notification->type}'>";
-                $html .=    "<p>{$notification->message}</p>";
-                $html .= '</div>';
-            }
-            echo $html;
+        // Draw notification queue
+        add_action( 'network_admin_notices', function() {
+            echo self::drawNotifications();
         });
+        add_action( 'admin_notices', function() {
+            echo self::drawNotifications();
+        });
+    }
+    
+    
+    /**
+     * Draw the admin notifications
+     *
+     * @return string
+     */
+    private static function drawNotifications()
+    {
+        $html = '';
+        foreach ( self::$notifications as $notification ) {
+            $html .= "<div class='notice notice-{$notification->type}'>";
+            $html .=    "<p>{$notification->message}</p>";
+            $html .= '</div>';
+        }
+        return $html;
     }
 }
