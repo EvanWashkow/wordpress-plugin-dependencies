@@ -12,6 +12,13 @@ final class Dependency
 {
     
     /**
+     * Notification messages to print to the admin screen
+     *
+     * @var array
+     */
+    private static $notifications = [];
+    
+    /**
      * ID of the plugin being included as a dependency
      *
      * @var Plugins\Models\Plugin
@@ -77,5 +84,37 @@ final class Dependency
             $this->plugin->deactivate( $siteID );
         }
         return $isActive;
+    }
+    
+    
+    /**
+     * Notify the administrator
+     *
+     * @param string $message Message to print
+     * @param string $type    The type of notification to send
+     */
+    private static function notify( string $message, string $type = 'error' )
+    {
+        // Add notification message to queue
+        $notification = new \stdClass();
+        $notification->message = $message;
+        $notification->type    = $type;
+        self::$notifications[] = $notification;
+        
+        // Only register notification handler once
+        if ( 2 <= count( self::$notifications )) {
+            return;
+        }
+        
+        // Print queue of notifications
+        add_action( 'admin_notices', function() {
+            $html = '';
+            foreach ( self::$notifications as $notification ) {
+                $html .= "<div class='notice notice-{$notification->type}'>";
+                $html .=    '<p>' . __( $notification->message ) . '</p>';
+                $html .= '</div>';
+            }
+            echo $html;
+        });
     }
 }
