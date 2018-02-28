@@ -1,5 +1,5 @@
 <?php
-namespace WordPress\Plugins\Dependencies;
+namespace WordPress\Plugins\Extensions\Dependencies;
 
 use WordPress\Plugins;
 use WordPress\Sites;

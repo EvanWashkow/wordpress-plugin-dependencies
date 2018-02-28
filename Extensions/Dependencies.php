@@ -1,7 +1,5 @@
 <?php
-namespace WordPress\Plugins;
-
-require_once( __DIR__ . '/Dependencies/Dependency.php' );
+namespace WordPress\Plugins\Extensions;
 
 /**
  * Defines a manager for WordPress plugin dependencies
