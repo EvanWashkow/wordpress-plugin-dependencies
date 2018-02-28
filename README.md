@@ -5,13 +5,11 @@ Extends WordPress lackluster plugin management into a more full-featured suite o
 
 ## Setup
 
-WordPress Plugin Extensions will try to auto-start when possible. However, due to various WordPress install configurations, this is not always a guarentee. It is a better to manually initialize extensions at the top of your plugin file, right beneath the plugin comment block.
+Nothing. **This autostarts as a background daemon service**, so long as WordPress is started prior. In composer, order your dependencies so that WordPress is always loaded first.
+
+**Last resort**. If you tried fixing your build, and absolutely cannot get this to run, you can manually initialize it like so:
 
 ```
-/**
- * Name: My Plugin
- */
-
 \WordPress\Plugins\Extensions::Initialize();
 ```
 
@@ -23,15 +21,13 @@ WordPress plugin dependencies done simply, the right way
 
 ### Setup
 
-After adding this WordPress extension via composer, add `Dependencies` (of the plugin folder names) to your plugin header, and continue on with your life.
+Add `Dependencies` (of the plugin folder names) to your plugin header, and continue on with your life.
 
 ```
 /**
  * Name: My Plugin
  * Dependencies: jetpack, akismet
  */
- 
- \WordPress\Plugins\Extensions::Initialize();
 ```
 
 ### What it does
@@ -46,4 +42,4 @@ Forces the plugin dependencies to always remain active while the main plugin is 
     * Flaw: Plugin Names **will** change
 
 2. The dependency manager is, itself, a plugin
-    * Flaw: Nothing ensures that the plugin-dependency manager plugin itself will be activated. It's not a daemon service that's always running in the background.
+    * Flaw: Nothing ensures that the plugin-dependency manager plugin itself will be activated. It's not a daemon service that's always running in the background like this.
