@@ -38,10 +38,8 @@ final class Extensions
         // Include WordPress actions and filters
         require_once( ABSPATH . '/wp-includes/plugin.php' );
         
-        // On plugins loaded, include the plugin dependencies
-        add_action( 'plugins_loaded', function() {
-            Extensions\Dependencies::Initialize();
-        });
+        // Before any plugins load, include the plugin extensions
+        Extensions\Dependencies::Initialize();
         
         // Mark as initialized
         self::$isInitialized = true;
