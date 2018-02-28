@@ -21,13 +21,13 @@ final class Dependencies
      *
      * @var bool
      */
-    private static $isStarted = false;
+    private static $isInitalizeed = false;
     
     
     /**
-     * Start the plugin dependency manager
+     * Initialize the plugin dependency manager
      */
-    public static function Start()
+    public static function Initalize()
     {
         // Exit. Cannot run automatically. This function must be called when ready.
         if ( !function_exists( 'add_filter' )) {
@@ -35,7 +35,7 @@ final class Dependencies
         }
         
         // Exit. This has already been started.
-        elseif ( self::$isStarted ) {
+        elseif ( self::$isInitalizeed ) {
             return;
         }
         
@@ -81,4 +81,4 @@ final class Dependencies
 }
 
 // Try to auto-start the dependencies manager
-Dependencies::Start();
+Dependencies::Initalize();
