@@ -25,13 +25,23 @@ final class Extensions
             return;
         }
         
+        // Exit. WordPress actions and filters are missing.
+        if ( !file_exists( ABSPATH . '/wp-includes/plugin.php' )) {
+            return;
+        }
+        
         // Exit. Already initialized.
         if ( self::$isInitialized ) {
             return;
         }
         
-        // Initialize extensions
-        Extensions\Dependencies::Initialize();
+        // Include WordPress actions and filters
+        require_once( ABSPATH . '/wp-includes/plugin.php' );
+        
+        // On plugins loaded, include the plugin dependencies
+        add_action( 'plugins_loaded', function() {
+            Extensions\Dependencies::Initialize();
+        });
         
         // Mark as initialized
         self::$isInitialized = true;
