@@ -3,6 +3,19 @@
 Extends WordPress lackluster plugin management into a more full-featured suite of tools
 
 
+## Setup
+
+WordPress Plugin Extensions will try to auto-start when possible. However, due to various WordPress install configurations, this is not always a guarentee. It is a better to manually initialize extensions at the top of your plugin file, right beneath the plugin comment block.
+
+```
+/**
+ * Name: My Plugin
+ */
+
+\WordPress\Plugins\Extensions::Initialize();
+```
+
+
 ## Plugin Dependencies
 
 WordPress plugin dependencies done simply, the right way
@@ -17,6 +30,8 @@ After adding this WordPress extension via composer, add `Dependencies` (of the p
  * Name: My Plugin
  * Dependencies: jetpack, akismet
  */
+ 
+ \WordPress\Plugins\Extensions::Initialize();
 ```
 
 ### What it does
