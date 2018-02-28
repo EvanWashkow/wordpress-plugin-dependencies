@@ -1,7 +1,14 @@
-# WordPress Plugin Dependencies
+# WordPress Plugin Extensions
+
+Extends WordPress lackluster plugin management into a more full-featured suite of tools
+
+
+## Plugin Dependencies
+
 WordPress plugin dependencies done simply, the right way
 
-## Setup
+
+### Setup
 
 After adding this WordPress extension via composer, add `Dependencies` (of the plugin folder names) to your plugin header, and continue on with your life.
 
@@ -12,11 +19,11 @@ After adding this WordPress extension via composer, add `Dependencies` (of the p
  */
 ```
 
-## What it does
+### What it does
 Forces the plugin dependencies to always remain active while the main plugin is active (i.e. the user cannot deactivate). If the plugin dependencies cannot be found, the plugin cannot be activated.
 
 
-## For the critics
+### For the critics
 
 "Why should I use yours? There is already a very popular plugin that adds plugin dependencies!" However it is fundamentally flawed for multiple reasons:
 
