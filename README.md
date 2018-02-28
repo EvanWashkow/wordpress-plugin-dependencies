@@ -1,6 +1,6 @@
 # WordPress Plugin Extensions
 
-Extends WordPress lackluster plugin management into a more full-featured suite of tools
+Extends WordPress' lackluster plugin management into a more full-featured suite of tools
 
 
 ## Setup
