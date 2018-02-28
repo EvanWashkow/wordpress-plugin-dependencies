@@ -1,7 +1,7 @@
 {
     "name":        "evanwashkow/wordpress-plugin-extensions",
     "description": "Extends WordPress lackluster plugin management into a more full-featured suite of tools",
-    "version":     "1.0.0",
+    "version":     "1.1.0",
     "repositories": [
         {
             "type": "vcs",
