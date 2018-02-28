@@ -45,8 +45,8 @@ final class Dependencies
             return $headers;
         });
         
-        // Listen for plugins load to enforce plugin dependencies
-        add_action( 'plugins_loaded', function() {
+        // Listen for plugin initialization
+        add_action( 'init', function() {
             self::buildDependencies();
         });
     }
