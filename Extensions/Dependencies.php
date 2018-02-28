@@ -14,29 +14,12 @@ final class Dependencies
      */
     const FILE_HEADER_ID = 'Dependencies';
     
-    /**
-     * Has the dependency manager been started?
-     *
-     * @var bool
-     */
-    private static $isInitializeed = false;
-    
     
     /**
      * Initialize the plugin dependency manager
      */
     public static function Initialize()
     {
-        // Exit. Cannot run automatically. This function must be called when ready.
-        if ( !function_exists( 'add_filter' )) {
-            return;
-        }
-        
-        // Exit. This has already been started.
-        elseif ( self::$isInitializeed ) {
-            return;
-        }
-        
         // Add custom plugin file header
         add_filter( 'extra_plugin_headers', function( array $headers ) {
             $headers[] = self::FILE_HEADER_ID;
@@ -77,6 +60,3 @@ final class Dependencies
         }
     }
 }
-
-// Try to auto-start the dependencies manager
-Dependencies::Initialize();

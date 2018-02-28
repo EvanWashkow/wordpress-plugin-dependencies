@@ -30,6 +30,9 @@ final class Extensions
             return;
         }
         
+        // Initialize extensions
+        Extensions\Dependencies::Initialize();
+        
         // Mark as initialized
         self::$isInitialized = true;
     }
