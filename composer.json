@@ -22,7 +22,7 @@
     },
     "autoload": {
         "files": [
-            "Dependencies.php"
+            "Extensions.php"
         ]
     },
     "authors": [
