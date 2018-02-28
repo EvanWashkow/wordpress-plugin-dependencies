@@ -1,6 +1,6 @@
 {
-    "name":        "evanwashkow/wordpress-plugin-dependencies",
-    "description": "Allows plugin dependencies to be added the right way to WordPress",
+    "name":        "evanwashkow/wordpress-plugin-extensions",
+    "description": "Extends WordPress lackluster plugin management into a more full-featured suite of tools",
     "version":     "1.0.0",
     "repositories": [
         {
