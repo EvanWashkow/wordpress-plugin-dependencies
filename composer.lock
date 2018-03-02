@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a25f2649b6299c0471e77e6cbcea128",
+    "content-hash": "fad44fc23641fcf8bc0a08cd4bd7b5eb",
     "packages": [
         {
             "name": "evanwashkow/object-oriented-wordpress",
-            "version": "0.2.1",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EvanWashkow/object-oriented-wordpress.git",
-                "reference": "a2bf118711b188069a3e230f4e27a0afe0a7c4de"
+                "reference": "5ee1019b169c36542948c472f3aae12959f74dd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EvanWashkow/object-oriented-wordpress/zipball/a2bf118711b188069a3e230f4e27a0afe0a7c4de",
-                "reference": "a2bf118711b188069a3e230f4e27a0afe0a7c4de",
+                "url": "https://api.github.com/repos/EvanWashkow/object-oriented-wordpress/zipball/5ee1019b169c36542948c472f3aae12959f74dd2",
+                "reference": "5ee1019b169c36542948c472f3aae12959f74dd2",
                 "shasum": ""
             },
             "require": {
-                "evanwashkow/php-libraries": ">=0.1.2",
-                "evanwashkow/php-utilities": ">=0.2.0",
+                "evanwashkow/php-libraries": "0.1.2",
+                "evanwashkow/php-utilities": "0.2.0",
                 "php": ">=5.4"
             },
             "type": "library",
@@ -51,10 +51,10 @@
             ],
             "description": "Access all of WordPress in an object-oriented way",
             "support": {
-                "source": "https://github.com/EvanWashkow/object-oriented-wordpress/tree/0.2.1",
+                "source": "https://github.com/EvanWashkow/object-oriented-wordpress/tree/0.2.2",
                 "issues": "https://github.com/EvanWashkow/object-oriented-wordpress/issues"
             },
-            "time": "2018-02-27T18:48:50+00:00"
+            "time": "2018-03-02T23:07:53+00:00"
         },
         {
             "name": "evanwashkow/php-libraries",
