@@ -9,20 +9,16 @@
         },
         {
             "type": "vcs",
-            "url":  "https://github.com/EvanWashkow/php-utilities"
-        },
-        {
-            "type": "vcs",
             "url":  "https://github.com/EvanWashkow/object-oriented-wordpress"
         }
     ],
     "require": {
         "php": ">=5.4",
-        "evanwashkow/object-oriented-wordpress": "0.2.2"
+        "evanwashkow/object-oriented-wordpress": "0.3.*"
     },
     "autoload": {
         "files": [
-            "Extensions.php"
+            "composer.php"
         ],
         "psr-4": {
             "WordPress\\Plugins\\Extensions\\": "Extensions"

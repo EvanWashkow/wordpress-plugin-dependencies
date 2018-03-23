@@ -1,6 +1,8 @@
 <?php
 namespace WordPress\Plugins\Extensions;
 
+use WordPress\Plugins\Models\PluginSpec;
+
 /**
  * Defines a manager for WordPress plugin dependencies
  */
@@ -40,13 +42,13 @@ final class Dependencies
     {
         // For each plugin, extract its dependencies from its file header
         $plugins = \WordPress\Plugins::Get();
-        foreach ( $plugins as $plugin ) {
+        $plugins->loop(function( $i, PluginSpec $plugin ) {
             
             // Lookup the dependency IDs
             $dependencyIDs = $plugin->get( self::FILE_HEADER_ID );
             $dependencyIDs = trim( $dependencyIDs );
             if ( '' === $dependencyIDs ) {
-                continue;
+                return null;
             }
             $dependencyIDs = explode( ',', $dependencyIDs );
             
@@ -57,6 +59,6 @@ final class Dependencies
                     new Dependencies\Dependency( $plugin->getID(), $dependencyID );
                 }
             }
-        }
+        });
     }
 }

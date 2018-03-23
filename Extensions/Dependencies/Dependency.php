@@ -42,32 +42,36 @@ final class Dependency
     public function __construct( string $pluginID, string $dependencyID )
     {
         // Set properties
-        $this->plugin     = Plugins::Get( $pluginID );
-        $this->dependency = Plugins::Get( $dependencyID );
+        $this->plugin = Plugins::Get( $pluginID );
         
-        // Deactivate plugin if the dependency does not exist
-        if ( null === $this->dependency ) {
+        // Dependency exists
+        if ( Plugins::IsValidID( $dependencyID )) {
+            $this->dependency = Plugins::Get( $dependencyID );
+            
+            // Site-wide: try to activate the dependency if the plugin is active
+            // (necessary for plugin updates)
+            if (
+                $this->plugin->isActive(      Sites::ALL ) &&
+                !$this->dependency->isActive( Sites::ALL )
+            ) {
+                $this->activateDependency( Sites::ALL );
+            }
+            
+            // Single-site: try to activate the dependency if the plugin is active
+            // (necessary for plugin updates)
+            elseif (
+                $this->plugin->isActive(      Sites::CURRENT ) &&
+                !$this->dependency->isActive( Sites::CURRENT )
+            ) {
+                $this->activateDependency( Sites::CURRENT );
+            }
+        }
+        
+        // Dependency missing: deactivate plugin
+        else {
             $this->plugin->deactivate( Sites::ALL );
             $this->plugin->deactivate( Sites::CURRENT );
             self::notify( "Deactivating the plugin <b>{$this->plugin->getName()}</b> because the required plugin <b>{$dependencyID}</b> does not exist." );
-        }
-        
-        // Site-wide: try to activate the dependency if the plugin is active
-        // (necessary for plugin updates)
-        elseif (
-            $this->plugin->isActive(      Sites::ALL ) &&
-            !$this->dependency->isActive( Sites::ALL )
-        ) {
-            $this->activateDependency( Sites::ALL );
-        }
-        
-        // Single-site: try to activate the dependency if the plugin is active
-        // (necessary for plugin updates)
-        elseif (
-            $this->plugin->isActive(      Sites::CURRENT ) &&
-            !$this->dependency->isActive( Sites::CURRENT )
-        ) {
-            $this->activateDependency( Sites::CURRENT );
         }
     }
     
