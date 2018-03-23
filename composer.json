@@ -22,7 +22,7 @@
     },
     "autoload": {
         "files": [
-            "Extensions.php"
+            "composer.php"
         ],
         "psr-4": {
             "WordPress\\Plugins\\Extensions\\": "Extensions"
