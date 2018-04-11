@@ -42,7 +42,7 @@ final class Dependencies
     {
         // For each plugin, extract its dependencies from its file header
         $plugins = \WordPress\Plugins::Get();
-        $plugins->clone()->loop(function( $i, PluginSpec $plugin ) {
+        $plugins->loop(function( $i, PluginSpec $plugin ) {
             
             // Lookup the dependency IDs
             $dependencyIDs = $plugin->get( self::FILE_HEADER_ID );
