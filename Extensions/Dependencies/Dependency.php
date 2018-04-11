@@ -2,6 +2,7 @@
 namespace WordPress\Plugins\Extensions\Dependencies;
 
 use WordPress\Plugins;
+use WordPress\Plugins\Models\Plugin;
 use WordPress\Sites;
 
 /**
@@ -21,14 +22,14 @@ final class Dependency
     /**
      * ID of the plugin being included as a dependency
      *
-     * @var Plugins\Models\Plugin
+     * @var Plugin
      */
     private $dependency;
     
     /**
      * ID of the main plugin that requires the dependency
      *
-     * @var Plugins\Models\Plugin
+     * @var Plugin
      */
     private $plugin;
     
@@ -36,13 +37,13 @@ final class Dependency
     /**
      * Create a new dependency instance
      *
-     * @param string $pluginID     ID of the main plugin that requires the dependency
+     * @param Plugin $plugin       Plugin that requires the dependency
      * @param string $dependencyID ID of the plugin being included as a dependency
      */
-    public function __construct( string $pluginID, string $dependencyID )
+    public function __construct( Plugin $plugin, string $dependencyID )
     {
         // Set properties
-        $this->plugin = Plugins::Get( $pluginID );
+        $this->plugin = $plugin;
         
         // Dependency exists
         if ( Plugins::IsValidID( $dependencyID )) {
