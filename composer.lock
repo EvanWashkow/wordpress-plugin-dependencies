@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/EvanWashkow/object-oriented-wordpress.git",
-                "reference": "fbe580e6f48a9d61d049f8dd9b58b1077ddea7a3"
+                "reference": "65107883bea7259bd2e9f8dde584e861c53b5d8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EvanWashkow/object-oriented-wordpress/zipball/fbe580e6f48a9d61d049f8dd9b58b1077ddea7a3",
-                "reference": "fbe580e6f48a9d61d049f8dd9b58b1077ddea7a3",
+                "url": "https://api.github.com/repos/EvanWashkow/object-oriented-wordpress/zipball/65107883bea7259bd2e9f8dde584e861c53b5d8d",
+                "reference": "65107883bea7259bd2e9f8dde584e861c53b5d8d",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "source": "https://github.com/EvanWashkow/object-oriented-wordpress/tree/rename-interfaces",
                 "issues": "https://github.com/EvanWashkow/object-oriented-wordpress/issues"
             },
-            "time": "2018-06-17 07:33:23"
+            "time": "2018-06-22 20:16:02"
         },
         {
             "name": "evanwashkow/php-libraries",
@@ -61,12 +61,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/EvanWashkow/php-libraries.git",
-                "reference": "34b338b201e132a731bdf825756d95b0b55ffaad"
+                "reference": "5e46ca5ab75a15685978c67c6753b63ff8a6fe32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EvanWashkow/php-libraries/zipball/34b338b201e132a731bdf825756d95b0b55ffaad",
-                "reference": "34b338b201e132a731bdf825756d95b0b55ffaad",
+                "url": "https://api.github.com/repos/EvanWashkow/php-libraries/zipball/5e46ca5ab75a15685978c67c6753b63ff8a6fe32",
+                "reference": "5e46ca5ab75a15685978c67c6753b63ff8a6fe32",
                 "shasum": ""
             },
             "require": {
@@ -96,7 +96,7 @@
                 "source": "https://github.com/EvanWashkow/php-libraries/tree/rename-interfaces",
                 "issues": "https://github.com/EvanWashkow/php-libraries/issues"
             },
-            "time": "2018-06-13 05:52:53"
+            "time": "2018-06-22 20:05:53"
         }
     ],
     "packages-dev": [],
