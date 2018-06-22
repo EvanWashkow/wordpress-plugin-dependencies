@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "84150f317c2416f5a9d0d6e9aa330aae",
+    "content-hash": "f6ac1a7748af2b19d843da43fa1798b8",
     "packages": [
         {
             "name": "evanwashkow/object-oriented-wordpress",
-            "version": "dev-rename-interfaces",
+            "version": "0.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EvanWashkow/object-oriented-wordpress.git",
-                "reference": "65107883bea7259bd2e9f8dde584e861c53b5d8d"
+                "reference": "f66af520c7d1e3b4cbc35b777dd18944ac43a1d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EvanWashkow/object-oriented-wordpress/zipball/65107883bea7259bd2e9f8dde584e861c53b5d8d",
-                "reference": "65107883bea7259bd2e9f8dde584e861c53b5d8d",
+                "url": "https://api.github.com/repos/EvanWashkow/object-oriented-wordpress/zipball/f66af520c7d1e3b4cbc35b777dd18944ac43a1d2",
+                "reference": "f66af520c7d1e3b4cbc35b777dd18944ac43a1d2",
                 "shasum": ""
             },
             "require": {
-                "evanwashkow/php-libraries": "dev-rename-interfaces",
+                "evanwashkow/php-libraries": "0.6.0",
                 "php": ">=7.0"
             },
             "type": "library",
@@ -50,23 +50,23 @@
             ],
             "description": "Access all of WordPress in an object-oriented way",
             "support": {
-                "source": "https://github.com/EvanWashkow/object-oriented-wordpress/tree/rename-interfaces",
+                "source": "https://github.com/EvanWashkow/object-oriented-wordpress/tree/v0.3.5",
                 "issues": "https://github.com/EvanWashkow/object-oriented-wordpress/issues"
             },
-            "time": "2018-06-22 20:16:02"
+            "time": "2018-06-22T20:31:23+00:00"
         },
         {
             "name": "evanwashkow/php-libraries",
-            "version": "dev-rename-interfaces",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EvanWashkow/php-libraries.git",
-                "reference": "5e46ca5ab75a15685978c67c6753b63ff8a6fe32"
+                "reference": "fe52deba6e436cb6ee93d06c30156314b3051e94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EvanWashkow/php-libraries/zipball/5e46ca5ab75a15685978c67c6753b63ff8a6fe32",
-                "reference": "5e46ca5ab75a15685978c67c6753b63ff8a6fe32",
+                "url": "https://api.github.com/repos/EvanWashkow/php-libraries/zipball/fe52deba6e436cb6ee93d06c30156314b3051e94",
+                "reference": "fe52deba6e436cb6ee93d06c30156314b3051e94",
                 "shasum": ""
             },
             "require": {
@@ -93,19 +93,16 @@
             ],
             "description": "Foundational shared libraries for PHP",
             "support": {
-                "source": "https://github.com/EvanWashkow/php-libraries/tree/rename-interfaces",
+                "source": "https://github.com/EvanWashkow/php-libraries/tree/v0.6.0",
                 "issues": "https://github.com/EvanWashkow/php-libraries/issues"
             },
-            "time": "2018-06-22 20:05:53"
+            "time": "2018-06-22T20:24:29+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "evanwashkow/php-libraries": 20,
-        "evanwashkow/object-oriented-wordpress": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
