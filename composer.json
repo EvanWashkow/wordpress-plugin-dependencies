@@ -14,7 +14,8 @@
     ],
     "require": {
         "php": ">=5.4",
-        "evanwashkow/object-oriented-wordpress": "0.3.*"
+        "evanwashkow/php-libraries": "dev-rename-interfaces",
+        "evanwashkow/object-oriented-wordpress": "dev-rename-interfaces"
     },
     "autoload": {
         "files": [
