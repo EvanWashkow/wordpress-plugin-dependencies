@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f6ac1a7748af2b19d843da43fa1798b8",
+    "content-hash": "49f0cac2c36def624bad09fa5222a1e2",
     "packages": [
         {
             "name": "evanwashkow/object-oriented-wordpress",
-            "version": "0.3.5",
+            "version": "dev-php-libraries-0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EvanWashkow/object-oriented-wordpress.git",
-                "reference": "f66af520c7d1e3b4cbc35b777dd18944ac43a1d2"
+                "reference": "7b109893689594a9d51e9f5cb50afc67fca44173"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EvanWashkow/object-oriented-wordpress/zipball/f66af520c7d1e3b4cbc35b777dd18944ac43a1d2",
-                "reference": "f66af520c7d1e3b4cbc35b777dd18944ac43a1d2",
+                "url": "https://api.github.com/repos/EvanWashkow/object-oriented-wordpress/zipball/7b109893689594a9d51e9f5cb50afc67fca44173",
+                "reference": "7b109893689594a9d51e9f5cb50afc67fca44173",
                 "shasum": ""
             },
             "require": {
-                "evanwashkow/php-libraries": "0.6.0",
+                "evanwashkow/php-libraries": "dev-rework-collections",
                 "php": ">=7.0"
             },
             "type": "library",
@@ -50,27 +50,30 @@
             ],
             "description": "Access all of WordPress in an object-oriented way",
             "support": {
-                "source": "https://github.com/EvanWashkow/object-oriented-wordpress/tree/v0.3.5",
+                "source": "https://github.com/EvanWashkow/object-oriented-wordpress/tree/php-libraries-0.8.0",
                 "issues": "https://github.com/EvanWashkow/object-oriented-wordpress/issues"
             },
-            "time": "2018-06-22T20:31:23+00:00"
+            "time": "2019-01-11 18:27:34"
         },
         {
             "name": "evanwashkow/php-libraries",
-            "version": "0.6.0",
+            "version": "dev-rework-collections",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EvanWashkow/php-libraries.git",
-                "reference": "fe52deba6e436cb6ee93d06c30156314b3051e94"
+                "reference": "b4aa10e89c997fee291c597854e2ce687288e936"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EvanWashkow/php-libraries/zipball/fe52deba6e436cb6ee93d06c30156314b3051e94",
-                "reference": "fe52deba6e436cb6ee93d06c30156314b3051e94",
+                "url": "https://api.github.com/repos/EvanWashkow/php-libraries/zipball/b4aa10e89c997fee291c597854e2ce687288e936",
+                "reference": "b4aa10e89c997fee291c597854e2ce687288e936",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7"
             },
             "type": "library",
             "autoload": {
@@ -93,16 +96,19 @@
             ],
             "description": "Foundational shared libraries for PHP",
             "support": {
-                "source": "https://github.com/EvanWashkow/php-libraries/tree/v0.6.0",
+                "source": "https://github.com/EvanWashkow/php-libraries/tree/rework-collections",
                 "issues": "https://github.com/EvanWashkow/php-libraries/issues"
             },
-            "time": "2018-06-22T20:24:29+00:00"
+            "time": "2019-01-11 17:26:39"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "evanwashkow/object-oriented-wordpress": 20,
+        "evanwashkow/php-libraries": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

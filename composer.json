@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "evanwashkow/object-oriented-wordpress": ">=0.3.5"
+        "evanwashkow/object-oriented-wordpress": "dev-php-libraries-0.8.0","evanwashkow/php-libraries": "dev-rework-collections"
     },
     "autoload": {
         "files": [
