@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "49f0cac2c36def624bad09fa5222a1e2",
+    "content-hash": "54ac75ee378977d417c6b74f2b815a46",
     "packages": [
         {
             "name": "evanwashkow/object-oriented-wordpress",
-            "version": "dev-php-libraries-0.8.0",
+            "version": "0.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EvanWashkow/object-oriented-wordpress.git",
-                "reference": "7b109893689594a9d51e9f5cb50afc67fca44173"
+                "reference": "b65beb689e71b32ce3a2fdb6aa7753d39f405802"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EvanWashkow/object-oriented-wordpress/zipball/7b109893689594a9d51e9f5cb50afc67fca44173",
-                "reference": "7b109893689594a9d51e9f5cb50afc67fca44173",
+                "url": "https://api.github.com/repos/EvanWashkow/object-oriented-wordpress/zipball/b65beb689e71b32ce3a2fdb6aa7753d39f405802",
+                "reference": "b65beb689e71b32ce3a2fdb6aa7753d39f405802",
                 "shasum": ""
             },
             "require": {
-                "evanwashkow/php-libraries": "dev-rework-collections",
+                "evanwashkow/php-libraries": ">=0.8.0",
                 "php": ">=7.0"
             },
             "type": "library",
@@ -50,23 +50,23 @@
             ],
             "description": "Access all of WordPress in an object-oriented way",
             "support": {
-                "source": "https://github.com/EvanWashkow/object-oriented-wordpress/tree/php-libraries-0.8.0",
+                "source": "https://github.com/EvanWashkow/object-oriented-wordpress/tree/v0.3.7",
                 "issues": "https://github.com/EvanWashkow/object-oriented-wordpress/issues"
             },
-            "time": "2019-01-11 18:27:34"
+            "time": "2019-01-11T18:47:19+00:00"
         },
         {
             "name": "evanwashkow/php-libraries",
-            "version": "dev-rework-collections",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EvanWashkow/php-libraries.git",
-                "reference": "b4aa10e89c997fee291c597854e2ce687288e936"
+                "reference": "eee3eabf68265a4bbe00cac0d9b6aa7ce8611291"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EvanWashkow/php-libraries/zipball/b4aa10e89c997fee291c597854e2ce687288e936",
-                "reference": "b4aa10e89c997fee291c597854e2ce687288e936",
+                "url": "https://api.github.com/repos/EvanWashkow/php-libraries/zipball/eee3eabf68265a4bbe00cac0d9b6aa7ce8611291",
+                "reference": "eee3eabf68265a4bbe00cac0d9b6aa7ce8611291",
                 "shasum": ""
             },
             "require": {
@@ -96,19 +96,16 @@
             ],
             "description": "Foundational shared libraries for PHP",
             "support": {
-                "source": "https://github.com/EvanWashkow/php-libraries/tree/rework-collections",
+                "source": "https://github.com/EvanWashkow/php-libraries/tree/v0.8.0",
                 "issues": "https://github.com/EvanWashkow/php-libraries/issues"
             },
-            "time": "2019-01-11 17:26:39"
+            "time": "2019-01-11T18:42:08+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "evanwashkow/object-oriented-wordpress": 20,
-        "evanwashkow/php-libraries": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
