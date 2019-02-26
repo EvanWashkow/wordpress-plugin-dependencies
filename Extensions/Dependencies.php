@@ -29,7 +29,7 @@ final class Dependencies
         });
         
         // Listen for plugin initialization
-        add_action( 'init', function() {
+        add_action( 'admin_init', function() {
             self::buildDependencies();
         });
     }
