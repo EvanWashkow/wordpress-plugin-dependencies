@@ -1,7 +1,6 @@
 {
     "name":        "evanwashkow/wordpress-plugin-extensions",
     "description": "Extends WordPress lackluster plugin management into a more full-featured suite of tools",
-    "version":     "1.2.5",
     "repositories": [
         {
             "type": "vcs",
@@ -15,7 +14,7 @@
     "require": {
         "php": ">=5.4",
         "evanwashkow/object-oriented-wordpress": ">=0.3.7",
-        "evanwashkow/php-libraries": ">=0.8.0"
+        "evanwashkow/php-libraries":             ">=0.14.0"
     },
     "autoload": {
         "files": [
