@@ -42,8 +42,11 @@ final class Dependencies
     {
         // For each plugin, extract its dependencies from its file header
         $plugins = \WordPress\Plugins::Get();
-        $plugins->loop(function( $i, Plugin $plugin ) {
-            
+        foreach ( $plugins as $entry )
+        {
+            // Get the plugin
+            $plugin = $entry->getValue();
+
             // Lookup the dependency IDs
             $dependencyIDs = $plugin->get( self::FILE_HEADER_ID );
             $dependencyIDs = trim( $dependencyIDs );
@@ -59,7 +62,6 @@ final class Dependencies
                     new Dependencies\Dependency( $plugin, $dependencyID );
                 }
             }
-            return true;
-        });
+        }
     }
 }
