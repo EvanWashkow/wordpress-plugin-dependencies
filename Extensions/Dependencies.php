@@ -51,7 +51,7 @@ final class Dependencies
             $dependencyIDs = $plugin->get( self::FILE_HEADER_ID );
             $dependencyIDs = trim( $dependencyIDs );
             if ( '' === $dependencyIDs ) {
-                return true;
+                continue;
             }
             $dependencyIDs = explode( ',', $dependencyIDs );
             
